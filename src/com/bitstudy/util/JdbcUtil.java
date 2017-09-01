@@ -1,4 +1,4 @@
-package kr.co.mlec.util;
+package com.bitstudy.util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
