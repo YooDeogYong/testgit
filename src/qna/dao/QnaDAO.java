@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bitstudy.common.util.ConnectionPool;
-import com.bitstudy.common.util.JdbcUtil;
-import com.bitstudy.qna.domain.Qna;
+import kr.co.mlec.util.ConnectionPool;
+import kr.co.mlec.util.JdbcUtil;
+import qna.domain.Qna;
 
 public class QnaDAO {
 	List<Qna> list = new ArrayList<>();
