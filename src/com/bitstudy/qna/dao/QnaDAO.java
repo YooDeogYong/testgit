@@ -8,7 +8,7 @@ import java.util.List;
 
 import kr.co.mlec.util.ConnectionPool;
 import kr.co.mlec.util.JdbcUtil;
-import qna.domain.Qna;
+import com.bitstudy.qna.domain.Qna;;
 
 public class QnaDAO {
 	List<Qna> list = new ArrayList<>();
