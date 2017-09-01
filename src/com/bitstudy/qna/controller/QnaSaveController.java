@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bitstudy.qna.dao.QnaDAO;
 import com.bitstudy.qna.domain.Qna;
 
-@WebServlet("/com/bitstudy/qna/controller/qnasavecontroller")
+@WebServlet("editor")
 public class QnaSaveController extends HttpServlet{
 
 	@Override

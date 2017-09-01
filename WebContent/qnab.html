@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Study</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="css/business-casual.css" rel="stylesheet">
+</head>
+<body>
+<!--<div class="jumbotron ">-->
+<!--<div class="container text-center">-->
+<!--<h1>Study Q & A</h1>-->
+<!--</div>-->
+<!--</div>-->
+<div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Q & A</div>
+<div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">Bit
+    Java Language Study
+</div>
+<!-- 네비게이션 -->
+<nav class="navbar navbar-inverse">
+    <!--navbar-fixed-top">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Study</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">홈</a></li>
+                <li class="active"><a href="#">공지사항</a></li>
+                <li class="active"><a href="#">자유게시판</a></li>
+                <li class="active"><a href="qna.html">Q & A</a></li>
+                <li class="active"><a href="#">자료실</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">정보관리</a></li>
+                <li><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--네비 끝-->
+<!--게시판 시작-->
+
+
+<div class="container">
+    <span style="float:left"><h2>질문</h2></span><span><h3 class="text-center">만두가 그렇게 귀요미 라며 ㅇㅅㅇ?</h3></span>
+    <footer><h5 class="text-center">만두 | 2017 08 24 18:00</h5></footer>
+    <hr>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+    <p><h4>만두는 귀요미 ㅇㅅㅇb</h4></p>
+
+
+
+    <hr>
+    <div class="media mb-4">
+        <div class="media-body">
+            <h5 class="mt-0">냥이</h5>
+            네 그럼 요즘 어떤 간식이 맛나나요 ?
+<hr>
+            <div class="media mt-4">
+                <div class="media-body">
+                    <h5 class="mt-0">만두</h5>
+                    간식은 치킨이죠 ㅇㅅㅇ
+                </div>
+            </div>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default btn-outline-dark pull-right" data-toggle="modal"
+                    data-target="#myModal">
+                답변하기</button>
+
+            <!-- Modal -->
+            <form action="/qnab1">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">답변</h4>
+                        </div>
+                        <div class="modal-body">
+                            <textarea class="form-group col-lg-12 col-xs-12" rows="7" cols="110"
+                                      name="qnaAContent"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-dark pull-right" data-dismiss="modal">보내기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+            <form>
+                <div class="form-group">
+                    <span>
+                    <!--<textarea class="form-group col-lg-12 col-xs-12" rows="5" cols="110"></textarea>-->
+
+                    <!--<button type="submit"  class="btn btn-outline-dark btn-block btn-lg" onclick="list.html">-->
+                            <!--답변하기-->
+                        <!--</button>-->
+                        <a href="qna.html" class="btn btn-default btn-outline-dark pull-right" role="button"> 목록 </a>
+                        <a href="qna.html" class="btn btn-default btn-outline-dark pull-right" role="button"> 수정 </a>
+                        <a href="qna.html" class="btn btn-default btn-outline-dark pull-right" role="button"> 다음글 </a>
+                        <a href="qna.html" class="btn btn-default btn-outline-dark pull-right" role="button"> 이전글 </a>
+
+                    </span>
+
+
+                        <!--<span style="float:right" class = "col-lg-1 col-xs-1" >-->
+                        <!--<button type="button" class="btn btn-primary" >목록-->
+
+                        <!--<span style="float:right" class = "col-lg-1 col-xs-1">-->
+
+                    </div>
+                </form>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted pull-right">Copyright &copy; 2017 Study</span>
+    </div>
+</footer>
+</body>
+
+</html>
