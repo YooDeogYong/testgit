@@ -10,7 +10,7 @@ public class Qna {
 	String name;
 	Date regDate = new Date();
 	int readCount = 0;
-	int groupNo ;
+	String groupNo ;
 	public int getNo() {
 		return no;
 	}
@@ -47,10 +47,10 @@ public class Qna {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public int getGroupNo() {
+	public String getGroupNo() {
 		return groupNo;
 	}
-	public void setGroupNo(int groupNo) {
+	public void setGroupNo(String groupNo) {
 		this.groupNo = groupNo;
 	}
 

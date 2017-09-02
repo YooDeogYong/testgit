@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bitstudy.qna.dao.QnaDAO;
 import com.bitstudy.qna.domain.Qna;
 
-@WebServlet("editor")
+@WebServlet("/editor")
 public class QnaSaveController extends HttpServlet{
 
 	@Override
@@ -19,13 +19,13 @@ public class QnaSaveController extends HttpServlet{
 			
 		Qna qna = new Qna();
 		qna.setNo(Integer.parseInt(request.getParameter("no")));
-		qna.setGroupNo(Integer.parseInt(request.getParameter("groupNo")));
+		qna.setGroupNo(request.getParameter("groupNo"));
 		qna.setName(request.getParameter("name"));
 		qna.setTitle(request.getParameter("title"));
 		qna.setContent(request.getParameter("content"));
 		// 1이면 질문 2면은 답변
 		QnaDAO dao = new QnaDAO();
-		if (qna.getGroupNo() == 1) {
+		if (qna.getGroupNo().equals("1")) {
 			 dao.insertQ(qna);
 		}else {
 			

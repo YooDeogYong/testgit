@@ -21,7 +21,7 @@ public class QnaDeleteController extends HttpServlet{
 		Qna qna = new Qna();
 		
 		qna.setNo(Integer.parseInt(request.getParameter("no")));
-		qna.setGroupNo(Integer.parseInt(request.getParameter("groupNo")));
+		qna.setGroupNo(request.getParameter("groupNo"));
 		qna.setName(request.getParameter("name"));
 		
 		QnaDAO dao = new QnaDAO();
