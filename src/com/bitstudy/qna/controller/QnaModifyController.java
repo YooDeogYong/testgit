@@ -21,7 +21,7 @@ public class QnaModifyController extends HttpServlet{
 		mod.setTitle(request.getParameter("title"));
 		mod.setContent(request.getParameter("content"));
 		mod.setNo(Integer.parseInt(request.getParameter("no")));
-		mod.setGroupNo(Integer.parseInt(request.getParameter("groupNo")));
+		mod.setGroupNo(request.getParameter("groupNo"));
 		//1이면 질문 2면은 답변
 		QnaDAO dao = new QnaDAO();
 		
