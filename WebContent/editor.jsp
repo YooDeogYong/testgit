@@ -13,13 +13,16 @@
 </head>
 <body>
 
-<form action="">
+<form action="/qna/html/qna/editor">
 <div class="container">
-<input class="form-control" id="qnaTitle" type="text" placeholder="제목을 입력하세요"><br>
-  <div id="summernote"><p>내용을 입력하세요</p></div>
+<input class="form-control" id="title" name="title" type="text" placeholder="제목을 입력하세요"><br>
+  <input type="hidden" name="groupNo" value="1">
+  <input type="hidden" name="name" value="dragon">
+  <input type="hidden" name="id" value="user">
+  <textarea id="content" name="content"></textarea>
   <script>
     $(document).ready(function() {
-        $('#summernote').summernote({
+        $('#content').summernote({
         		  
         height: 500,                 
 		  minHeight: 100,             

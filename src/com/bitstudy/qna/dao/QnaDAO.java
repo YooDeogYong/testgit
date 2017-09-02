@@ -28,7 +28,7 @@ public class QnaDAO {
 		ResultSet rs = stmt.executeQuery();
 		while(rs.next()) {
 			qnal.setNo(rs.getInt("no"));
-			qnal.setGroupNo(rs.getInt("group_no"));
+			qnal.setGroupNo(rs.getString("group_no"));
 			qnal.setTitle(rs.getString("title"));
 			qnal.setName(rs.getString("name"));
 			qnal.setRegDate(rs.getDate("reg_date"));
@@ -58,7 +58,7 @@ public class QnaDAO {
 				ResultSet rs = stmt.executeQuery();
 				while(rs.next()) {
 					qnal.setNo(rs.getInt("no"));
-					qnal.setGroupNo(rs.getInt("group_no"));
+					qnal.setGroupNo(rs.getString("group_no"));
 					qnal.setTitle(rs.getString("title"));
 					qnal.setName(rs.getString("name"));
 					qnal.setRegDate(rs.getDate("reg_date"));
@@ -95,16 +95,17 @@ public class QnaDAO {
 		
 	public void insertQ(Qna b) {//질문용 글작성
 		try {
+			
 			con = ConnectionPool.getConnection();
 			StringBuffer sql = new StringBuffer();
-			sql.append("insert into no, group_no,content,title,name ");
-			sql.append(" from t97_qna ");
-			sql.append(" values(qna_no.nextval,?,?,?,? ");
+			sql.append("insert into t97_qna(no, group_no,content,title,name,id )");
+			sql.append(" values(qna_no.nextval,?,?,?,?,? )");
 			stmt = con.prepareStatement(sql.toString());
-			stmt.setInt(1,b.getGroupNo());//답변인지 아닌지 확인하는값
+			stmt.setString(1, b.getGroupNo());//답변인지 아닌지 확인하는값
 			stmt.setString(2, b.getContent());
 			stmt.setString(3, b.getTitle());
 			stmt.setString(4, b.getName());
+			stmt.setString(5, b.getId());
 			stmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -117,14 +118,16 @@ public class QnaDAO {
 		try {
 			con = ConnectionPool.getConnection();
 			StringBuffer sql = new StringBuffer();
-			sql.append("insert into no, group_no,content,title,name " );
-			sql.append(" from t97_qna ");
-			sql.append(" values(?,?,?,?,?)" );
+			sql.append("insert into t97_qna(no, group_no,content,title,name,id " );
+			sql.append(" values(?,?,?,?,?,?)" );
 			stmt = con.prepareStatement(sql.toString());
-			stmt.setInt(1, b.getNo());// 원글 시퀀스 번호 가져오기
-			stmt.setInt(2, b.getGroupNo());// 답변인지 아닌지 확인하는값
-			stmt.setString(3, b.getContent());
-			stmt.setString(4, b.getName());
+			int i  =0;
+			stmt.setInt(++i, b.getNo());// 원글 시퀀스 번호 가져오기
+			stmt.setString(++i, b.getGroupNo());// 답변인지 아닌지 확인하는값
+			stmt.setString(++i, b.getContent());
+			stmt.setString(++i, b.getTitle());
+			stmt.setString(++i, b.getName());
+			stmt.setString(++i, b.getId());
 			stmt.executeUpdate();
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -146,7 +149,7 @@ public class QnaDAO {
 		stmt.setString(1, b.getContent());
 		stmt.setString(2, b.getTitle());
 		stmt.setInt(3, b.getNo());
-		stmt.setInt(4, b.getGroupNo());
+		stmt.setString(4, b.getGroupNo());
 		stmt.executeUpdate();
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -168,7 +171,7 @@ public class QnaDAO {
 			int dy = 0;
 			stmt.setString(++dy, d.getName());
 			stmt.setInt(++dy, d.getNo());
-			stmt.setInt(++dy, d.getGroupNo());
+			stmt.setString(++dy, d.getGroupNo());
 			cnt = stmt.executeUpdate();
 			
 			}catch(Exception e) {

@@ -11,14 +11,10 @@ public class Qna {
 	Date regDate = new Date();
 	int readCount = 0;
 	String groupNo ;
+	String id;
+	
 	public int getNo() {
 		return no;
-	}
-	public int getReadCount() {
-		return readCount;
-	}
-	public void setReadCount(int readCount) {
-		this.readCount = readCount;
 	}
 	public void setNo(int no) {
 		this.no = no;
@@ -47,11 +43,24 @@ public class Qna {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
+	public int getReadCount() {
+		return readCount;
+	}
+	public void setReadCount(int readCount) {
+		this.readCount = readCount;
+	}
 	public String getGroupNo() {
 		return groupNo;
 	}
 	public void setGroupNo(String groupNo) {
 		this.groupNo = groupNo;
 	}
-
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	
 }

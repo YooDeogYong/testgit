@@ -26,12 +26,12 @@ var edit = function() {
 	  $('.click2edit').summernote('destroy');
 	};
 </script>
-<form action="main.jsp">
+<form action="/qna/html/qna/editor">
 <div class="container">
-<input class="form-control" id="title" type="text" placeholder="제목을 입력하세요"><br>
+<input class="form-control" id="title" name="title" type="text" placeholder="제목을 입력하세요"><br>
   <input type="hidden" name="groupNo" value="1">
   <input type="hidden" name="name" value="dragon">
-  <div id="content" name="content"><p>내용을 입력하세요</p></div>
+  <textarea id="content" name="content"></textarea>
   <script>
     $(document).ready(function() {
         $('#content').summernote({
