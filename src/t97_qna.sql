@@ -5,7 +5,7 @@ create table t97_qna
 	name varchar2(30) not null,
 	reg_date date default sysdate,
 	group_no varchar2(5)not null,
-	read_Count number(5) not null,
+	read_Count number(5) default 0,
 	id varchar2(5) not null
 	);
 
